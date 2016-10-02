@@ -1,57 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
-  <parameter name="browser" value="chrome"/>
-  <test name="Testie(failed)" parallel="tests">
-    <parameter name="browser" value="ie"/>
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <parameter name="brower" value="firefox"/>
+  <test name="Test(failed)">
+    <parameter name="brower" value="firefox"/>
     <classes>
-      <class name="testScript.Scenario_Search">
-        <methods>
-          <include name="launch_App"/>
-          <include name="teardown"/>
-          <include name="launch_App"/>
-          <include name="teardown"/>
-          <include name="launch_App"/>
-          <include name="teardown"/>
-          <include name="intitalSetup"/>
-          <include name="ValidSearch" invocation-numbers="2"/>
-        </methods>
-      </class> <!-- testScript.Scenario_Search -->
       <class name="testScript.Scenario_Cart">
         <methods>
-          <include name="launch_App"/>
-          <include name="teardown"/>
-          <include name="launch_App"/>
-          <include name="teardown"/>
-          <include name="Add_to_cart" invocation-numbers="0"/>
-        </methods>
-      </class> <!-- testScript.Scenario_Cart -->
-    </classes>
-  </test> <!-- Testie(failed) -->
-  <test name="Testff(failed)" parallel="tests">
-    <parameter name="browser" value="firefox"/>
-    <classes>
-      <class name="testScript.Scenario_Search">
-        <methods>
-          <include name="launch_App"/>
-          <include name="teardown"/>
-          <include name="launch_App"/>
-          <include name="teardown"/>
-          <include name="launch_App"/>
-          <include name="teardown"/>
           <include name="intitalSetup"/>
-          <include name="ValidSearch"/>
-        </methods>
-      </class> <!-- testScript.Scenario_Search -->
-      <class name="testScript.Scenario_Cart">
-        <methods>
-          <include name="launch_App"/>
-          <include name="teardown"/>
-          <include name="launch_App"/>
-          <include name="teardown"/>
           <include name="Add_to_cart"/>
         </methods>
       </class> <!-- testScript.Scenario_Cart -->
     </classes>
-  </test> <!-- Testff(failed) -->
+  </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
