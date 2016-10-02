@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <parameter name="browser" value="firefox"/>
   <test name="Test(failed)">
+    <parameter name="browser" value="firefox"/>
     <classes>
-      <class name="testScript.Scenario_Search">
+      <class name="testScript.Scenario_Cart">
         <methods>
           <include name="launch_App"/>
           <include name="intitalSetup"/>
-          <include name="InvalidSearch"/>
-          <include name="ValidSearch"/>
+          <include name="Add_to_cart"/>
         </methods>
-      </class> <!-- testScript.Scenario_Search -->
+      </class> <!-- testScript.Scenario_Cart -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

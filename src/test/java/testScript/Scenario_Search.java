@@ -22,7 +22,7 @@ public class Scenario_Search extends Base{
 		String orderid=Searchdata.get("order").toString();
 		
 		
-		startTest = extentReports.startTest(tcid);
+		startTest = extentReports.startTest(btype + "-" +tcid);
 		
 		if(driver.getTitle().contains("rediff")){
 			startTest.log(LogStatus.PASS, "validate title","Passed  Validate title" + startTest.addScreenCapture(screenshot(tcid, orderid)));
@@ -57,7 +57,7 @@ public class Scenario_Search extends Base{
 		String orderid=Searchdata.get("order").toString();
 		
 		
-		startTest = extentReports.startTest(tcid);
+		startTest = extentReports.startTest(btype + "-" +tcid);
 		
 		if(driver.getTitle().contains("rediff")){
 			startTest.log(LogStatus.PASS, "validate title","Passed  Validate title" + startTest.addScreenCapture(screenshot(tcid, orderid)));

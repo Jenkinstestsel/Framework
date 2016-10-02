@@ -1,36 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="4" failed="0" total="4" passed="0">
+<testng-results skipped="1" failed="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="3463" started-at="2016-10-02T04:47:12Z" finished-at="2016-10-02T04:47:16Z">
+  <suite name="Suite" duration-ms="7940" started-at="2016-10-02T05:59:53Z" finished-at="2016-10-02T06:00:01Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="3463" started-at="2016-10-02T04:47:12Z" finished-at="2016-10-02T04:47:16Z">
-      <class name="testScript.Scenario_Search">
-        <test-method status="PASS" signature="intitalSetup()[pri:0, instance:testScript.Scenario_Search@1c24521]" name="intitalSetup" is-config="true" duration-ms="328" started-at="2016-10-02T10:17:12Z" finished-at="2016-10-02T10:17:12Z">
+    <test name="Test" duration-ms="7940" started-at="2016-10-02T05:59:53Z" finished-at="2016-10-02T06:00:01Z">
+      <class name="testScript.Scenario_Cart">
+        <test-method status="PASS" signature="intitalSetup()[pri:0, instance:testScript.Scenario_Cart@398b7c]" name="intitalSetup" is-config="true" duration-ms="296" started-at="2016-10-02T11:29:53Z" finished-at="2016-10-02T11:29:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- intitalSetup -->
-        <test-method status="FAIL" signature="launch_App()[pri:0, instance:testScript.Scenario_Search@1c24521]" name="launch_App" is-config="true" duration-ms="0" started-at="2016-10-02T10:17:13Z" finished-at="2016-10-02T10:17:13Z">
-          <exception class="org.openqa.selenium.remote.UnreachableBrowserException">
+        <test-method status="FAIL" signature="launch_App(java.lang.String)[pri:0, instance:testScript.Scenario_Cart@398b7c]" name="launch_App" is-config="true" duration-ms="0" started-at="2016-10-02T11:29:54Z" finished-at="2016-10-02T11:29:54Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NoSuchMethodError">
             <message>
-              <![CDATA[Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
-Build info: version: '2.48.1', revision: 'd80083d8f7b0b0319976ef9712f7a2b531abaceb', time: '2015-10-08 14:16:53'
-System info: host: 'DELL-PC', ip: '192.168.0.3', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_101'
-Driver info: driver.version: ChromeDriver]]>
+              <![CDATA[com.google.common.collect.Multimaps.transformValues(Lcom/google/common/collect/ListMultimap;Lcom/google/common/base/Function;)Lcom/google/common/collect/ListMultimap;]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.remote.UnreachableBrowserException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
-Build info: version: '2.48.1', revision: 'd80083d8f7b0b0319976ef9712f7a2b531abaceb', time: '2015-10-08 14:16:53'
-System info: host: 'DELL-PC', ip: '192.168.0.3', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_101'
-Driver info: driver.version: ChromeDriver
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:641)
+              <![CDATA[java.lang.NoSuchMethodError: com.google.common.collect.Multimaps.transformValues(Lcom/google/common/collect/ListMultimap;Lcom/google/common/base/Function;)Lcom/google/common/collect/ListMultimap;
+	at com.google.common.net.MediaType.toString(MediaType.java:697)
+	at org.openqa.selenium.remote.http.JsonHttpCommandCodec.encode(JsonHttpCommandCodec.java:222)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:139)
+	at org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.execute(NewProfileExtensionConnection.java:170)
+	at org.openqa.selenium.firefox.FirefoxDriver$LazyCommandExecutor.execute(FirefoxDriver.java:380)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:620)
 	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:247)
 	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:129)
-	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:142)
-	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:170)
-	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:159)
-	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:116)
+	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:216)
+	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:211)
+	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:207)
+	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:120)
 	at genericLibrary.Base.launch_App(Unknown Source)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -57,122 +63,28 @@ Driver info: driver.version: ChromeDriver
 	at org.testng.TestNG.run(TestNG.java:1048)
 	at org.testng.TestNG.privateMain(TestNG.java:1355)
 	at org.testng.TestNG.main(TestNG.java:1324)
-Caused by: org.openqa.selenium.WebDriverException: Unable to convert: {desiredCapabilities=Capabilities [{browserName=chrome, chromeOptions=org.openqa.selenium.chrome.ChromeOptions@1b550c0, version=, platform=ANY}]}
-Build info: version: '2.48.1', revision: 'd80083d8f7b0b0319976ef9712f7a2b531abaceb', time: '2015-10-08 14:16:53'
-System info: host: 'DELL-PC', ip: '192.168.0.3', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_101'
-Driver info: driver.version: ChromeDriver
-	at org.openqa.selenium.remote.BeanToJsonConverter.convert(BeanToJsonConverter.java:69)
-	at org.openqa.selenium.remote.http.JsonHttpCommandCodec.encode(JsonHttpCommandCodec.java:218)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:139)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:620)
-	... 32 more
-Caused by: org.openqa.selenium.WebDriverException: Unable to convert: {desiredCapabilities=Capabilities [{browserName=chrome, chromeOptions=org.openqa.selenium.chrome.ChromeOptions@1b550c0, version=, platform=ANY}]}
-Build info: version: '2.48.1', revision: 'd80083d8f7b0b0319976ef9712f7a2b531abaceb', time: '2015-10-08 14:16:53'
-System info: host: 'DELL-PC', ip: '192.168.0.3', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_101'
-Driver info: driver.version: ChromeDriver
-	at org.openqa.selenium.remote.BeanToJsonConverter.convertObject(BeanToJsonConverter.java:88)
-	at org.openqa.selenium.remote.BeanToJsonConverter.convert(BeanToJsonConverter.java:66)
-	... 36 more
-Caused by: org.openqa.selenium.WebDriverException: java.lang.reflect.InvocationTargetException
-Build info: version: '2.48.1', revision: 'd80083d8f7b0b0319976ef9712f7a2b531abaceb', time: '2015-10-08 14:16:53'
-System info: host: 'DELL-PC', ip: '192.168.0.3', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_101'
-Driver info: driver.version: ChromeDriver
-	at org.openqa.selenium.remote.BeanToJsonConverter.convertObject(BeanToJsonConverter.java:228)
-	at org.openqa.selenium.remote.BeanToJsonConverter.convertObject(BeanToJsonConverter.java:138)
-	at org.openqa.selenium.remote.BeanToJsonConverter.convertObject(BeanToJsonConverter.java:184)
-	at org.openqa.selenium.remote.BeanToJsonConverter.convertObject(BeanToJsonConverter.java:138)
-	at org.openqa.selenium.remote.BeanToJsonConverter.convertObject(BeanToJsonConverter.java:86)
-	... 37 more
-Caused by: java.lang.reflect.InvocationTargetException
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.openqa.selenium.remote.BeanToJsonConverter.convertObject(BeanToJsonConverter.java:213)
-	... 41 more
-Caused by: java.lang.NoSuchMethodError: com.google.common.collect.ImmutableList.copyOf(Ljava/util/Collection;)Lcom/google/common/collect/ImmutableList;
-	at org.openqa.selenium.chrome.ChromeOptions.toJson(ChromeOptions.java:213)
-	... 46 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.remote.UnreachableBrowserException -->
+          </exception> <!-- java.lang.NoSuchMethodError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launch_App -->
-        <test-method status="SKIP" signature="InvalidSearch(java.util.Map)[pri:0, instance:testScript.Scenario_Search@1c24521]" name="InvalidSearch" duration-ms="0" started-at="2016-10-02T10:17:16Z" data-provider="InvalidSearch" finished-at="2016-10-02T10:17:16Z">
+        <test-method status="SKIP" signature="Add_to_cart(java.util.Map)[pri:0, instance:testScript.Scenario_Cart@398b7c]" name="Add_to_cart" duration-ms="0" started-at="2016-10-02T11:30:01Z" data-provider="Addtocart" finished-at="2016-10-02T11:30:01Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{Searchtext=sdkjf, Execute=Y, Script_id=Invalid_Search, expected=Sorry..'sdkjf' does not match any product on Rediff Books., TCID=TC_08, order=1.0}]]>
+                <![CDATA[{Searchtext=flood and fire, Execute=Y, Script_id=Addtocart, TCID=TC_11, order=1.0}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- InvalidSearch -->
-        <test-method status="SKIP" signature="teardown()[pri:0, instance:testScript.Scenario_Search@1c24521]" name="teardown" is-config="true" duration-ms="0" started-at="2016-10-02T10:17:16Z" finished-at="2016-10-02T10:17:16Z">
+        </test-method> <!-- Add_to_cart -->
+        <test-method status="SKIP" signature="teardown()[pri:0, instance:testScript.Scenario_Cart@398b7c]" name="teardown" is-config="true" duration-ms="0" started-at="2016-10-02T11:30:01Z" finished-at="2016-10-02T11:30:01Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method status="SKIP" signature="ValidSearch(java.util.Map)[pri:0, instance:testScript.Scenario_Search@1c24521]" name="ValidSearch" duration-ms="0" started-at="2016-10-02T10:17:16Z" data-provider="ValidSearch" finished-at="2016-10-02T10:17:16Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{Searchtext=Chandler, Execute=Y, Script_id=Valid_Search, expected=234.0, TCID=TC_10, order=1.0}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ValidSearch -->
-        <test-method status="SKIP" signature="launch_App()[pri:0, instance:testScript.Scenario_Search@1c24521]" name="launch_App" is-config="true" duration-ms="0" started-at="2016-10-02T10:17:16Z" finished-at="2016-10-02T10:17:16Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launch_App -->
-        <test-method status="SKIP" signature="teardown()[pri:0, instance:testScript.Scenario_Search@1c24521]" name="teardown" is-config="true" duration-ms="0" started-at="2016-10-02T10:17:16Z" finished-at="2016-10-02T10:17:16Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-        <test-method status="SKIP" signature="ValidSearch(java.util.Map)[pri:0, instance:testScript.Scenario_Search@1c24521]" name="ValidSearch" duration-ms="0" started-at="2016-10-02T10:17:16Z" data-provider="ValidSearch" finished-at="2016-10-02T10:17:16Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{Searchtext=ways, Execute=Y, Script_id=Valid_Search, expected=456.0, TCID=TC_09, order=1.0}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ValidSearch -->
-        <test-method status="SKIP" signature="teardown()[pri:0, instance:testScript.Scenario_Search@1c24521]" name="teardown" is-config="true" duration-ms="0" started-at="2016-10-02T10:17:16Z" finished-at="2016-10-02T10:17:16Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-        <test-method status="SKIP" signature="launch_App()[pri:0, instance:testScript.Scenario_Search@1c24521]" name="launch_App" is-config="true" duration-ms="0" started-at="2016-10-02T10:17:16Z" finished-at="2016-10-02T10:17:16Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launch_App -->
-        <test-method status="SKIP" signature="launch_App()[pri:0, instance:testScript.Scenario_Search@1c24521]" name="launch_App" is-config="true" duration-ms="0" started-at="2016-10-02T10:17:16Z" finished-at="2016-10-02T10:17:16Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launch_App -->
-        <test-method status="SKIP" signature="teardown()[pri:0, instance:testScript.Scenario_Search@1c24521]" name="teardown" is-config="true" duration-ms="0" started-at="2016-10-02T10:17:16Z" finished-at="2016-10-02T10:17:16Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-        <test-method status="SKIP" signature="ValidSearch(java.util.Map)[pri:0, instance:testScript.Scenario_Search@1c24521]" name="ValidSearch" duration-ms="0" started-at="2016-10-02T10:17:16Z" data-provider="ValidSearch" finished-at="2016-10-02T10:17:16Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{Searchtext=Jaico, Execute=Y, Script_id=Valid_Search, expected=10.0, TCID=TC_11, order=1.0}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ValidSearch -->
-      </class> <!-- testScript.Scenario_Search -->
+      </class> <!-- testScript.Scenario_Cart -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

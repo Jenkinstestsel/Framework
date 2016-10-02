@@ -17,6 +17,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -25,6 +26,10 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 
+
+
+import org.testng.annotations.Parameters;
+
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 
@@ -32,14 +37,13 @@ public class Base {
 	public WebDriver driver;
 	public static ExtentReports extentReports;
 	public ExtentTest startTest;
+	public String btype;
+	
 	@BeforeSuite
 	public void intitalSetup(){
 		
-		
-		
 		extentReports = new ExtentReports("E:\\Project\\Report\\" + "rediffAutomationreport_" + timestamp() + ".html"    ,false);
-		
-		
+				
 	}
 	
 	
@@ -52,11 +56,21 @@ public class Base {
 		return reportdate;
 	}
 	
+	@Parameters("browser")
 	@BeforeMethod
-	public void launch_App() throws Exception{
-		
-		System.setProperty("webdriver.chrome.driver", "E:\\drivers\\chromedriver.exe");
-		driver = new ChromeDriver();
+	public void launch_App(String tbrowser) throws Exception{
+		btype=tbrowser;
+		System.out.println(tbrowser);
+		if(tbrowser.equals("firefox")){
+			driver = new FirefoxDriver();	
+		}else if(tbrowser.equals("chrome")){
+			System.setProperty("webdriver.chrome.driver", "E:\\drivers\\chromedriver.exe");
+			driver = new ChromeDriver();
+		}else if(tbrowser.equals("ie")){
+			System.setProperty("webdriver.ie.driver", "E:\\drivers\\IEDriverServer.exe");
+			driver = new InternetExplorerDriver();		
+		}
+
 		System.out.println(utility.getpropertyval("url"));
 		driver.get(utility.getpropertyval("url"));
 		driver.manage().window().maximize();
