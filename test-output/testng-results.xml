@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="19278" started-at="2016-10-01T13:56:23Z" finished-at="2016-10-01T13:56:42Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="19278" started-at="2016-10-01T13:56:23Z" finished-at="2016-10-01T13:56:42Z">
+      <class name="testScript.Scenario_Cart">
+        <test-method status="PASS" signature="intitalSetup()[pri:0, instance:testScript.Scenario_Cart@3bd550]" name="intitalSetup" is-config="true" duration-ms="108" started-at="2016-10-01T19:26:23Z" finished-at="2016-10-01T19:26:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- intitalSetup -->
+        <test-method status="PASS" signature="launch_App()[pri:0, instance:testScript.Scenario_Cart@3bd550]" name="launch_App" is-config="true" duration-ms="11893" started-at="2016-10-01T19:26:24Z" finished-at="2016-10-01T19:26:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launch_App -->
+        <test-method status="PASS" signature="Add_to_cart(java.util.Map)[pri:0, instance:testScript.Scenario_Cart@3bd550]" name="Add_to_cart" duration-ms="6542" started-at="2016-10-01T19:26:36Z" data-provider="Addtocart" finished-at="2016-10-01T19:26:42Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Searchtext=flood and fire, Execute=Y, Script_id=Addtocart, TCID=TC_11, order=1.0}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Add_to_cart -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:testScript.Scenario_Cart@3bd550]" name="teardown" is-config="true" duration-ms="250" started-at="2016-10-01T19:26:42Z" finished-at="2016-10-01T19:26:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- testScript.Scenario_Cart -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

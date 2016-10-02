@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
+    <classes>
+      <class name="testScript.Scenario_Cart">
+        <methods>
+          <include name="launch_App"/>
+          <include name="teardown"/>
+          <include name="intitalSetup"/>
+          <include name="Add_to_cart" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- testScript.Scenario_Cart -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
